@@ -22,37 +22,5 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-////        старый вариант
-////        val thread2 = Thread({
-////            println("Hi")
-////        })
-////        thread2.start()
-////        thread2.join()
-//
-////        Корутины: scope, dispatcher, context
-////        Виды диспетчеров: Default - реальные ядра+2, Main - 1 поток, IO- 64 потока, Unconfined - 1 + Default
-//
-////        context  = job - описывает работу корутины
-////        scope - контролирует jobs
-//        val scope = CoroutineScope(Dispatchers.Default)
-////        .launch{} - никогда ничего не вернет, возврщает Uint
-////        .async{} - может вернуть информацию. результат с помощью .await()
-////        runBlocking{} - не требует скоупа, откроет другую корутину и заблокирует поток, в котором вызвался блок
-//
-//        val job: Job = scope.async {
-//            delay(1000)
-//            println("first")
-//
-//            return@async 33883
-//        }
-//
-//        val job2: Job = scope.launch {
-//            delay(1000)
-//            println("first")
-//        }
-//
-////        suspend - для функций позволяет разделить код для корутин
-//
-////       handler looper
     }
 }

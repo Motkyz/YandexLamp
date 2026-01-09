@@ -14,8 +14,6 @@ class MainApp: Application() {
 
         super.onCreate()
     }
-
-
 }
 
 val Context.appComponent: AppComponent

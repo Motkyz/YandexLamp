@@ -1,6 +1,6 @@
 package com.example.lesson7.di
 
-import com.example.lesson7.data.DogsService
+import com.example.lesson7.data.LampService
 import dagger.Module
 import dagger.Provides
 import retrofit2.Retrofit
@@ -11,8 +11,8 @@ import retrofit2.create
 object NetworkModule {
 
     @Provides
-    fun provideDogsService(): DogsService = Retrofit.Builder()
-        .baseUrl("https://random.dog/")
+    fun provideLampService(): LampService = Retrofit.Builder()
+        .baseUrl("http://195.133.53.179:1337")
         .addConverterFactory(GsonConverterFactory.create())
         .build()
         .create()
