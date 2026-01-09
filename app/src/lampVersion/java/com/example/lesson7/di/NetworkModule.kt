@@ -1,5 +1,6 @@
 package com.example.lesson7.di
 
+import com.example.lesson7.BuildConfig
 import com.example.lesson7.data.LampService
 import dagger.Module
 import dagger.Provides
@@ -12,7 +13,7 @@ object NetworkModule {
 
     @Provides
     fun provideLampService(): LampService = Retrofit.Builder()
-        .baseUrl("http://195.133.53.179:1337")
+        .baseUrl(BuildConfig.URL)
         .addConverterFactory(GsonConverterFactory.create())
         .build()
         .create()

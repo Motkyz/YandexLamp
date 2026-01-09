@@ -39,6 +39,21 @@ android {
 
     buildFeatures {
         viewBinding = true
+        buildConfig = true
+    }
+
+    flavorDimensions += "version"
+    productFlavors {
+        create("lampVersion") {
+            dimension = "version"
+            applicationIdSuffix = ".lamp"
+            buildConfigField("String", "URL", "\"https://0.0.0.0\"")
+        }
+        create("serverVersion") {
+            dimension = "version"
+            applicationIdSuffix = ".server"
+            buildConfigField("String", "URL", "\"http://195.133.53.179:1337\"")
+        }
     }
 }
 
